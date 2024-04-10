@@ -12,5 +12,12 @@
     <h1 align="center">Game Home Page</h1>
     <h2 align="center" th:text="${randomWord}">Show The Random Word</h2>
     <hr>
+    <div align="center">
+        <form action="game-home" method="GET">
+            <label>Guess the Character : </label>
+            <input type="text" name="guessedChar">
+            <input type="submit" value="Try">
+        </form>
+    </div>
 </body>
 </html>
