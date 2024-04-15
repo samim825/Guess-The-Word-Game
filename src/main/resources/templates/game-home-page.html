@@ -11,6 +11,9 @@
 <body>
     <h1 align="center">Game Home Page</h1>
     <h2 align="center" th:text="${randomWord}">Show The Random Word</h2>
+    <div align="end">
+        <h3 th:text="'Tries Remainig '+ ${remainingTimes}">Tries Remaining :  </h3>
+    </div>
     <hr>
     <div align="center">
         <form action="game-home" method="GET">
@@ -18,6 +21,7 @@
             <input type="text" name="guessedChar">
             <input type="submit" value="Try">
         </form>
+
     </div>
 </body>
 </html>

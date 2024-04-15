@@ -25,10 +25,26 @@ public class GameService {
         for (char c: allCharactersOfTheWord) {
             if(c == '\u0000') {
                 ret = ret + "_";
+            } else {
+                ret = ret + c;
             }
             ret = ret + " ";
         }
 
         return ret;
+    }
+
+    public boolean addGuessedChar(char guessedChar) {
+
+        boolean isGuessCorrect = Boolean.FALSE;
+
+        for(int i = 0; i < randomlySelectedWord.length(); i++) {
+            if (guessedChar == randomlySelectedWord.charAt(i)) {
+                allCharactersOfTheWord[i] = guessedChar;
+                isGuessCorrect = Boolean.TRUE;
+            }
+        }
+
+        return isGuessCorrect;
     }
 }
